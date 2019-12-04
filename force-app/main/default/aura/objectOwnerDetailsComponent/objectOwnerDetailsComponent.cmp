@@ -1,0 +1,12 @@
+<aura:component access="global" implements="flexipage:availableForRecordHome,force:appHostable,force:hasRecordId" controller="objectOwnerDetailComponentCtrl" >
+<aura:attribute name="recordId" type="Id" description="SF recordId of the record"/>    
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+<aura:attribute name="oUser" type="user" default="{'sobjectType' : 'User'}" />
+
+<div Id = "ownerCompId"> 
+    <lightning:avatar src="{!v.oUser.SmallPhotoUrl}" />   
+    &nbsp;&nbsp;
+    {!v.oUser.Name}
+       
+    </div>  
+</aura:component>
